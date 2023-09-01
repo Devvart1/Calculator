@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+body{
+    background-image: linear-gradient(to right,rgb(137, 184, 195),rgb(53, 89, 162));
+}
+
+.calculator-grid{
+    display: grid;
+    justify-content: center;    /* for display grid use justify-content for horizontal*/   
+    align-content : center;     /* for display grid use align-content for virtical*/
+    height: 100vh;
+    /* outline: 0px; */
+    grid-template-columns:  repeat(4,100px);
+    grid-template-rows:120px repeat(5,100px);
+  
+}
+.calculator-grid > button{
+    cursor: pointer;
+    /* border-radius: 10%; */
+    font-size: 2rem;
+    border: 1px solid white;
+    background-color: rgb(0, 79, 148);
+
+}
+.calculator-grid >  button:hover{
+    background-color: rgb(92, 147, 196);
+}
+.span-two{
+    grid-column: span 2;
+}
+.output{
+    grid-column: 1/-1;   /* 1 to last */
+    background-color: rgb(70, 24, 24);
+    color: beige;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    overflow-y:scroll ;
+    word-break: break-all;
+}
+.output .previous-operand{
+    color:rgba(255,255,255,0.7);
+    font-size: 1.5rem;
+}
+
+.output .current-operand{
+    color: rgba(255,255,255);
+    font-size: 2.5rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
